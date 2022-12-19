@@ -87,6 +87,7 @@ section.intro{
     width: 80%;
     height: 70vh;
     margin: 50px auto;
+    overflow: hidden;
 }
 @media(max-width: 750px){
     section.intro{
@@ -108,7 +109,8 @@ div.description > h1{
 }
 div.description > p{
     color: rgba(255, 255, 255, 70%);
-    font-size: 16px;
+    font-size: 17px;
+    line-height: 20px;
 }
 span.input{
     color: #00d4ff;
@@ -129,19 +131,22 @@ div.image{
     width: 49%;
 }
 div.image > img{
-    max-width: 100%;
+    width: 100%;
 }
 @media (max-width:600px){
     section.intro{
         flex-direction: column-reverse;
         width: 80%;
-        margin: 120px auto;
+        height: auto;
+        margin-top: 30px;
+        margin-bottom: 60px;
     }
     div.description, div.image{
         width: 100%;
     }
     div.image{
         margin-bottom: 30px;
+        
     }
 }
 
@@ -250,7 +255,7 @@ div.categories_info > div > p{
 }
 /** Education styles */
 div.education{
-    margin-top: 20px;
+    margin-top: 10px;
     display: none;
     position: relative;
     animation-name: animateeducation;
@@ -343,6 +348,7 @@ div.project_wrapper{
 div.project{
     width: 33%;
     transition: background-color 0.7s;
+    margin: 20px 0;
 }
 @media (max-width:600px){
     div.project_wrapper{
@@ -397,19 +403,27 @@ form input, form input[type="submit"]{
 form input, textarea{
     outline: none;
     border: none;
-    border-radius: 5px;
+    border-radius: 5px 5px 0 0;
     padding: 1.5%;
     text-align: center;
     margin-bottom: 10px;
+}
+textarea{
+    resize: none;
+    border-radius: 0;
 }
 form input[type="submit"]{
     text-decoration: none;
     color: hsl(0, 0%, 100%);
     text-align: center;
-    border-radius: 5px;
+    border-radius: 0 0 5px 5px;
     background-color: hsl(198, 60%, 50%);
     padding: 1.5%;
     font-size: 15px;
+    cursor: pointer;
+}
+form input[type="submit"]:hover{
+    opacity: 70%;
 }
 div.newsletter > h3{
     margin-bottom: 10px;
