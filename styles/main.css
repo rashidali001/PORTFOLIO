@@ -344,6 +344,7 @@ section.projects{
 div.project_wrapper{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 div.project{
     width: 33%;
